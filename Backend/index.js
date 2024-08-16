@@ -66,7 +66,9 @@ app.use('/api/user', require('./routes/userRoutes'));
 
 app.use('/api/products', require('./routes/productRoutes'))
 
-
+app.get("/", (req, res) => {
+    res.status(200).send("API by Roz Maharjan");
+  });
 
 // defining port
 const PORT = process.env.PORT;
